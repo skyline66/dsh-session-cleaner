@@ -57,11 +57,11 @@
                         "versions":  [
                                          {
                                              "version":  "0.1.0",
-                                             "publishTimestamp":  1793275562,
+                                             "publishTimestamp":  1793328000,
                                              "source":  {
                                                             "type":  "git",
                                                             "url":  "https://github.com/skyline66/dsh-session-cleaner",
-                                                            "commit":  "5a289c29783a17fbc95f6d7ce88046868fc1ca98"
+                                                            "commit":  "95898ef89affc06b157d5a137638878f3db2a44d"
                                                         },
                                              "engines":  {
                                                              "dsh":  "\u003e=0.2.0"
