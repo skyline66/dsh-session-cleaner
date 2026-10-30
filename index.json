@@ -1,0 +1,73 @@
+﻿{
+    "format":  1,
+    "title":  {
+                  "en":  "Skyline\u0027s DSH Plugins",
+                  "zh":  "Skyline 的 DSH 插件"
+              },
+    "description":  {
+                        "en":  "Community bundles for the DeepSeek Harness.",
+                        "zh":  "DeepSeek Harness 社区插件合集。"
+                    },
+    "metadata":  {
+                     "categories":  {
+                                        "sessions":  {
+                                                         "title":  {
+                                                                       "en":  "Sessions",
+                                                                       "zh":  "会话管理"
+                                                                   }
+                                                     }
+                                    },
+                     "labels":  {
+
+                                },
+                     "sortKeys":  {
+
+                                  }
+                 },
+    "plugins":  [
+                    {
+                        "name":  "dsh-session-cleaner",
+                        "title":  {
+                                      "en":  "Session Cleaner",
+                                      "zh":  "会话清理器"
+                                  },
+                        "description":  {
+                                            "en":  "Delete whole session histories or trim a conversation from any message, from the session list and chat UI.",
+                                            "zh":  "在会话列表和聊天界面删除整个会话历史，或从任意消息处截断会话。"
+                                        },
+                        "icon":  "icon.svg",
+                        "author":  "skyline66",
+                        "homepage":  "https://github.com/skyline66/dsh-session-cleaner",
+                        "repository":  {
+                                           "url":  "https://github.com/skyline66/dsh-session-cleaner"
+                                       },
+                        "metadata":  {
+                                         "category":  "sessions",
+                                         "keywords":  [
+                                                          "session",
+                                                          "delete",
+                                                          "history",
+                                                          "trim",
+                                                          "cleaner",
+                                                          "会话",
+                                                          "删除",
+                                                          "清理"
+                                                      ]
+                                     },
+                        "versions":  [
+                                         {
+                                             "version":  "0.1.0",
+                                             "publishTimestamp":  1793275562,
+                                             "source":  {
+                                                            "type":  "git",
+                                                            "url":  "https://github.com/skyline66/dsh-session-cleaner",
+                                                            "commit":  "5a289c29783a17fbc95f6d7ce88046868fc1ca98"
+                                                        },
+                                             "engines":  {
+                                                             "dsh":  "\u003e=0.2.0"
+                                                         }
+                                         }
+                                     ]
+                    }
+                ]
+}

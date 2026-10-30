@@ -4,6 +4,9 @@
   "description": "Delete whole session histories or trim a conversation from any message, from the session list and chat UI",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "test": "node test/host.test.mjs"
+  },
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",

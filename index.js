@@ -216,6 +216,18 @@ export function apply(ctx, config) {
     const childId = typeof payload?.childId === 'string' ? payload.childId : undefined
     const sourceBefore = query ? await describeSession(query, fullId) : undefined
     const childBefore = query && childId ? await describeSession(query, childId) : undefined
+    // Safety guard: the fork must actually have cut the log. If the child still
+    // reaches the source's last sequence, the boundary was ignored — refuse to
+    // delete the source instead of destroying untrimmed history.
+    if (
+      childBefore &&
+      sourceBefore &&
+      Number.isSafeInteger(childBefore.lastSeq) &&
+      Number.isSafeInteger(sourceBefore.lastSeq) &&
+      childBefore.lastSeq >= sourceBefore.lastSeq
+    ) {
+      throw new ApiError(409, 'trim-no-cut', 'the continuation session still contains the full source log; refusing to delete the source')
+    }
     const registry = await stopAndDetach(fullId)
     const artifacts = await removeSessionArtifacts(fullId)
     await detachArchiveMarker(registry, fullId)
